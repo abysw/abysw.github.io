@@ -77,6 +77,51 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-test3" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/05/26/test3/" class="article-date">
+  <time class="dt-published" datetime="2022-05-26T08:38:40.000Z" itemprop="datePublished">2022-05-26</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E5%8D%9A%E5%AE%A2%E5%86%99%E4%BD%9C/">博客写作</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/05/26/test3/">博客头头测试</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p><img src="/2022/05/26/test3/images/swxxfxxx.png" alt="使用方法等详细信息请关注公众号【生物信息分析学习】（swxxfxxx）"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://abysw.github.io/2022/05/26/test3/" data-id="cl3mrl71o000842bzghfr6yxb" data-title="博客头头测试" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%B5%8B%E8%AF%95/" rel="tag">测试</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-raid-cache" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2022/05/25/raid-cache/" class="article-date">
@@ -110,46 +155,19 @@
 <p>然而，没有一项是可以马上实行的，于是继续寻找方案。</p>
 <p>期间将其他服务器的连接断开了，结果还是发现io继续过载。<br>于是发现有人说raid 的 cache没有开的话，也会造成io过载。</p>
 <p>以下是部分日志：</p>
-<p>未配置前：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ./storcli64 /c0 show all</span><br></pre></td></tr></table></figure>
-<p>Virtual Drives &#x3D; 1</p>
-<h1 id="VD-LIST"><a href="#VD-LIST" class="headerlink" title="VD LIST :"></a>VD LIST :</h1><hr>
-<h2 id="DG-x2F-VD-TYPE-State-Access-Consist-Cache-Cac-sCC-Size-Name"><a href="#DG-x2F-VD-TYPE-State-Access-Consist-Cache-Cac-sCC-Size-Name" class="headerlink" title="DG&#x2F;VD TYPE  State Access Consist Cache Cac sCC       Size Name  "></a>DG&#x2F;VD TYPE  State Access Consist Cache Cac sCC       Size Name  </h2><h2 id="0-x2F-0-RAID5-Optl-RW-Yes-RWTD-ON-276-486-TB-raid5"><a href="#0-x2F-0-RAID5-Optl-RW-Yes-RWTD-ON-276-486-TB-raid5" class="headerlink" title="0&#x2F;0   RAID5 Optl  RW     Yes     RWTD  -   ON  276.486 TB raid5 "></a>0&#x2F;0   RAID5 Optl  RW     Yes     RWTD  -   ON  276.486 TB raid5 </h2><p>配置：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ./storcli64 /c0/v0 <span class="built_in">set</span> rdcache=RA</span><br></pre></td></tr></table></figure>
-<p>CLI Version &#x3D; 007.1107.0000.0000 June 21, 2019<br>Operating system &#x3D; Linux 4.18.0-193.28.1.el7.aarch64<br>Controller &#x3D; 0<br>Status &#x3D; Success<br>Description &#x3D; None</p>
-<h1 id="Detailed-Status"><a href="#Detailed-Status" class="headerlink" title="Detailed Status :"></a>Detailed Status :</h1><hr>
-<h2 id="VD-Property-Value-Status-ErrCd-ErrMsg"><a href="#VD-Property-Value-Status-ErrCd-ErrMsg" class="headerlink" title="VD Property Value Status  ErrCd ErrMsg "></a>VD Property Value Status  ErrCd ErrMsg </h2><h2 id="0-rdCache-RA-Success-0"><a href="#0-rdCache-RA-Success-0" class="headerlink" title=" 0 rdCache  RA    Success     0 -      "></a> 0 rdCache  RA    Success     0 -      </h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ./storcli64 /c0/v0 <span class="built_in">set</span> wrcache=WB</span><br></pre></td></tr></table></figure>
-<p>CLI Version &#x3D; 007.1107.0000.0000 June 21, 2019<br>Operating system &#x3D; Linux 4.18.0-193.28.1.el7.aarch64<br>Controller &#x3D; 0<br>Status &#x3D; Success<br>Description &#x3D; VD is currently operating in WT mode.</p>
-<h1 id="Detailed-Status-1"><a href="#Detailed-Status-1" class="headerlink" title="Detailed Status :"></a>Detailed Status :</h1><hr>
-<h2 id="VD-Property-Value-Status-ErrCd-ErrMsg-1"><a href="#VD-Property-Value-Status-ErrCd-ErrMsg-1" class="headerlink" title="VD Property Value Status  ErrCd ErrMsg "></a>VD Property Value Status  ErrCd ErrMsg </h2><h2 id="0-wrCache-WB-Success-0"><a href="#0-wrCache-WB-Success-0" class="headerlink" title=" 0 wrCache  WB    Success     0 -      "></a> 0 wrCache  WB    Success     0 -      </h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ./storcli64 /c0/v0 <span class="built_in">set</span> iopolicy=Cached</span><br></pre></td></tr></table></figure>
-<p>CLI Version &#x3D; 007.1107.0000.0000 June 21, 2019<br>Operating system &#x3D; Linux 4.18.0-193.28.1.el7.aarch64<br>Controller &#x3D; 0<br>Status &#x3D; Success<br>Description &#x3D; None</p>
-<h1 id="Detailed-Status-2"><a href="#Detailed-Status-2" class="headerlink" title="Detailed Status :"></a>Detailed Status :</h1><hr>
-<h2 id="VD-Property-Value-Status-ErrCd-ErrMsg-2"><a href="#VD-Property-Value-Status-ErrCd-ErrMsg-2" class="headerlink" title="VD Property Value  Status  ErrCd ErrMsg "></a>VD Property Value  Status  ErrCd ErrMsg </h2><h2 id="0-IoPolicy-Cached-Success-0"><a href="#0-IoPolicy-Cached-Success-0" class="headerlink" title=" 0 IoPolicy Cached Success     0 -      "></a> 0 IoPolicy Cached Success     0 -      </h2><p>配置后：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ./storcli64 /c0 show all</span><br></pre></td></tr></table></figure>
-<p>Virtual Drives &#x3D; 1</p>
-<h1 id="VD-LIST-1"><a href="#VD-LIST-1" class="headerlink" title="VD LIST :"></a>VD LIST :</h1><hr>
-<h2 id="DG-x2F-VD-TYPE-State-Access-Consist-Cache-Cac-sCC-Size-Name-1"><a href="#DG-x2F-VD-TYPE-State-Access-Consist-Cache-Cac-sCC-Size-Name-1" class="headerlink" title="DG&#x2F;VD TYPE  State Access Consist Cache Cac sCC       Size Name  "></a>DG&#x2F;VD TYPE  State Access Consist Cache Cac sCC       Size Name  </h2><h2 id="0-x2F-0-RAID5-Optl-RW-Yes-RWTC-ON-276-486-TB-raid5"><a href="#0-x2F-0-RAID5-Optl-RW-Yes-RWTC-ON-276-486-TB-raid5" class="headerlink" title="0&#x2F;0   RAID5 Optl  RW     Yes     RWTC  -   ON  276.486 TB raid5 "></a>0&#x2F;0   RAID5 Optl  RW     Yes     RWTC  -   ON  276.486 TB raid5 </h2><h1 id="说是会降，我还没重启，等后续吧。"><a href="#说是会降，我还没重启，等后续吧。" class="headerlink" title="说是会降，我还没重启，等后续吧。"></a>说是会降，我还没重启，等后续吧。</h1><p>&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;<br>重新开机后：<br>$ top<br>top - 17:41:40 up 4 min,  2 users,  load average: 0.02, 0.09, 0.04<br>Tasks: 767 total,   1 running, 369 sleeping,   0 stopped,   0 zombie<br>%Cpu(s):  0.0 us,  0.0 sy,  0.0 ni,100.0 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st</p>
-<p>2022-05-25 17:46 # 任务投递<br>2022-05-25 17:54 #<br>top - 17:54:42 up 17 min,  2 users,  load average: 191.82, 151.32, 76.52<br>哈哈，没有用。<br>&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;<br>&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;<br>还有后续哈：<br>将阵列属性从直写改为回写。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">./storcli64 /c0/v0 <span class="built_in">set</span> pdcache=on</span><br><span class="line">./storcli64 /call/v0 <span class="built_in">set</span> rdcache=ra</span><br><span class="line">./storcli64 /c0/v0 <span class="built_in">set</span> iopolicy=cached</span><br><span class="line">./storcli64 /c0/v0 <span class="built_in">set</span> wrcache=awb</span><br></pre></td></tr></table></figure>
-
-<p>.&#x2F;storcli64 &#x2F;c0&#x2F;v0 set pdcache&#x3D;on—-打开硬盘缓存</p>
-<p>开启读缓存</p>
-<p>storcli64 &#x2F;call&#x2F;v0 set rdcache&#x3D;ra </p>
-<p>开启写缓存</p>
-<p>开启写缓存需要先设置IO优先级为缓存 storcli &#x2F;c0&#x2F;v0 set iopolicy&#x3D;cached<br>storcli64 &#x2F;c0&#x2F;v0 set wrcache&#x3D;awb</p>
-<p>&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;<br>然后呢，我又重启了，不知道怎么样，明天再试试直连吧。<br>一键传文本截图如是，也算是半自动化了。<br><img src="/2022/05/25/raid-cache/1653550078.jpg"><br>&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;<br>嘁，图片插入翻车。<br>安装插件：<br>npm install hexo-asset-image –save</p>
-<img src="/2022/05/25/raid-cache/2022/05/25/raid-cache/1653550078.jpg" class title="试试">
-<p>![](raid-cache&#x2F;1653550078.jpg)</p>
-<p>&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;<br>主要参考资料：<a target="_blank" rel="noopener" href="https://support.huaweicloud.com/tngg-kunpengbds/kunpengflinkhdp_05_0014.html">开启RAID卡Cache</a></p>
-
+        
+          <p class="article-more-link">
+            <a href="/2022/05/25/raid-cache/#more">Read More</a>
+          </p>
+        
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://abysw.github.io/2022/05/25/raid-cache/" data-id="cl3mr9fks0003ebbz77kagn68" data-title="raid-cache 设置问题" class="article-share-link">Share</a>
+      <a data-url="https://abysw.github.io/2022/05/25/raid-cache/" data-id="cl3mrl71l000342bz7ndm2skg" data-title="raid-cache 设置问题" class="article-share-link">Share</a>
       
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%9C%AC%E6%96%87%E4%BB%B6%E7%94%B1abysw%E8%BD%AF%E4%BB%B6%E7%9A%84blog%E5%B7%A5%E5%85%B7%E7%94%9F%E6%88%90%E5%92%8C%E4%BF%AE%E6%94%B9%EF%BC%8C%E5%90%8E%E7%BB%AD%E5%B0%86%E5%8A%A0%E5%85%A5%E6%B7%BB%E5%8A%A0%E5%9B%BE%E7%89%87%E7%AD%89%E5%8A%9F%E8%83%BD%E3%80%82/" rel="tag">本文件由abysw软件的blog工具生成和修改，后续将加入添加图片等功能。</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%8D%9A%E5%AE%A2%E5%86%99%E4%BD%9C/" rel="tag">博客写作</a></li></ul>
 
     </footer>
   </div>
@@ -191,7 +209,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://abysw.github.io/2022/05/24/test2/" data-id="cl3mr9fku0005ebbz2m5u0xlm" data-title="博客测试文档" class="article-share-link">Share</a>
+      <a data-url="https://abysw.github.io/2022/05/24/test2/" data-id="cl3mrl71n000542bzcixwho3t" data-title="博客测试文档" class="article-share-link">Share</a>
       
       
       
@@ -234,13 +252,13 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ abysw blog raid-cache <span class="comment"># 创建新的博客文档并开始编辑。</span></span><br></pre></td></tr></table></figure>
 
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ abysw blog up <span class="comment"># 更新博客并上传。</span></span><br></pre></td></tr></table></figure>
-<p>Hi abysw&#x2F;abysw.github.io! You’ve successfully authenticated, but GitHub does not provide shell access.<br>INFO  Validating config<br>INFO  Deleted database.<br>INFO  Deleted public folder.<br>INFO  Validating config<br>INFO  Start processing<br>INFO  Files loaded in 150 ms<br>INFO  Generated: archives&#x2F;index.html<br>INFO  Generated: index.html<br>INFO  Generated: images&#x2F;swxxfxxx.png<br>INFO  Generated: tags&#x2F;本文件由abysw软件的blog工具生成和修改，后续将加入添加图片等功能。&#x2F;index.html<br>INFO  Generated: archives&#x2F;2022&#x2F;05&#x2F;index.html<br>INFO  Generated: fancybox&#x2F;jquery.fancybox.min.css<br>INFO  Generated: js&#x2F;script.js<br>INFO  Generated: archives&#x2F;2022&#x2F;index.html<br>INFO  Generated: css&#x2F;style.css<br>INFO  Generated: css&#x2F;fonts&#x2F;FontAwesome.otf<br>INFO  Generated: fancybox&#x2F;jquery.fancybox.min.js<br>INFO  Generated: js&#x2F;jquery-3.4.1.min.js<br>INFO  Generated: css&#x2F;fonts&#x2F;fontawesome-webfont.eot<br>INFO  Generated: css&#x2F;fonts&#x2F;fontawesome-webfont.ttf<br>INFO  Generated: css&#x2F;fonts&#x2F;fontawesome-webfont.woff<br>INFO  Generated: css&#x2F;images&#x2F;banner.jpg<br>INFO  Generated: css&#x2F;fonts&#x2F;fontawesome-webfont.woff2<br>INFO  Generated: 2022&#x2F;05&#x2F;24&#x2F;test&#x2F;index.html<br>INFO  Generated: css&#x2F;fonts&#x2F;fontawesome-webfont.svg<br>INFO  Generated: 2022&#x2F;05&#x2F;23&#x2F;第一篇github博客&#x2F;index.html<br>INFO  Generated: 2022&#x2F;05&#x2F;23&#x2F;ann-isoform&#x2F;index.html<br>INFO  Generated: 2022&#x2F;05&#x2F;24&#x2F;test2&#x2F;index.html<br>INFO  Generated: 2022&#x2F;05&#x2F;23&#x2F;hello-world&#x2F;index.html<br>INFO  Generated: 2022&#x2F;05&#x2F;25&#x2F;raid-cache&#x2F;index.html<br>INFO  24 files generated in 325 ms<br>INFO  Validating config<br>INFO  Deploying: git<br>INFO  Clearing .deploy_git folder…<br>INFO  Copying files from public folder…<br>INFO  Copying files from extend dirs…<br>[master 808f9f0] Site updated: 2022-05-25 16:47:32<br> 8 files changed, 28 insertions(+), 22 deletions(-)<br>Enumerating objects: 41, done.<br>Counting objects: 100% (41&#x2F;41), done.<br>Delta compression using up to 256 threads<br>Compressing objects: 100% (13&#x2F;13), done.<br>Writing objects: 100% (21&#x2F;21), 2.88 KiB | 2.88 MiB&#x2F;s, done.<br>Total 21 (delta 9), reused 0 (delta 0), pack-reused 0<br>remote: Resolving deltas: 100% (9&#x2F;9), completed with 9 local objects.<br>To github.com:abysw&#x2F;abysw.github.io.git<br>   f163b1b..808f9f0  HEAD -&gt; master<br>Branch ‘master’ set up to track ‘<a href="mailto:&#x67;&#105;&#x74;&#64;&#x67;&#x69;&#x74;&#x68;&#x75;&#98;&#46;&#x63;&#111;&#x6d;">&#x67;&#105;&#x74;&#64;&#x67;&#x69;&#x74;&#x68;&#x75;&#98;&#46;&#x63;&#111;&#x6d;</a>:abysw&#x2F;abysw.github.io.git&#x2F;master’.<br>INFO  Deploy done: git</p>
+<p>Hi abysw&#x2F;abysw.github.io! You’ve successfully authenticated, but GitHub does not provide shell access.<br>INFO  Validating config<br>INFO  Deleted database.<br>INFO  Deleted public folder.<br>INFO  Validating config<br>INFO  Start processing<br>INFO  Files loaded in 150 ms<br>INFO  Generated: archives&#x2F;index.html<br>INFO  Generated: index.html<br>INFO  Generated: images&#x2F;swxxfxxx.png<br>INFO  Generated: tags&#x2F;本文件由abysw软件的blog工具生成和修改，后续将加入添加图片等功能。&#x2F;index.html<br>INFO  Generated: archives&#x2F;2022&#x2F;05&#x2F;index.html<br>INFO  Generated: fancybox&#x2F;jquery.fancybox.min.css<br>INFO  Generated: js&#x2F;script.js<br>INFO  Generated: archives&#x2F;2022&#x2F;index.html<br>INFO  Generated: css&#x2F;style.css<br>INFO  Generated: css&#x2F;fonts&#x2F;FontAwesome.otf<br>INFO  Generated: fancybox&#x2F;jquery.fancybox.min.js<br>INFO  Generated: js&#x2F;jquery-3.4.1.min.js<br>INFO  Generated: css&#x2F;fonts&#x2F;fontawesome-webfont.eot<br>INFO  Generated: css&#x2F;fonts&#x2F;fontawesome-webfont.ttf<br>INFO  Generated: css&#x2F;fonts&#x2F;fontawesome-webfont.woff<br>INFO  Generated: css&#x2F;images&#x2F;banner.jpg<br>INFO  Generated: css&#x2F;fonts&#x2F;fontawesome-webfont.woff2<br>INFO  Generated: 2022&#x2F;05&#x2F;24&#x2F;test&#x2F;index.html<br>INFO  Generated: css&#x2F;fonts&#x2F;fontawesome-webfont.svg<br>INFO  Generated: 2022&#x2F;05&#x2F;23&#x2F;第一篇github博客&#x2F;index.html<br>INFO  Generated: 2022&#x2F;05&#x2F;23&#x2F;ann-isoform&#x2F;index.html<br>INFO  Generated: 2022&#x2F;05&#x2F;24&#x2F;test2&#x2F;index.html<br>INFO  Generated: 2022&#x2F;05&#x2F;23&#x2F;hello-world&#x2F;index.html<br>INFO  Generated: 2022&#x2F;05&#x2F;25&#x2F;raid-cache&#x2F;index.html<br>INFO  24 files generated in 325 ms<br>INFO  Validating config<br>INFO  Deploying: git<br>INFO  Clearing .deploy_git folder…<br>INFO  Copying files from public folder…<br>INFO  Copying files from extend dirs…<br>[master 808f9f0] Site updated: 2022-05-25 16:47:32<br> 8 files changed, 28 insertions(+), 22 deletions(-)<br>Enumerating objects: 41, done.<br>Counting objects: 100% (41&#x2F;41), done.<br>Delta compression using up to 256 threads<br>Compressing objects: 100% (13&#x2F;13), done.<br>Writing objects: 100% (21&#x2F;21), 2.88 KiB | 2.88 MiB&#x2F;s, done.<br>Total 21 (delta 9), reused 0 (delta 0), pack-reused 0<br>remote: Resolving deltas: 100% (9&#x2F;9), completed with 9 local objects.<br>To github.com:abysw&#x2F;abysw.github.io.git<br>   f163b1b..808f9f0  HEAD -&gt; master<br>Branch ‘master’ set up to track ‘<a href="mailto:&#x67;&#105;&#116;&#x40;&#x67;&#105;&#x74;&#x68;&#x75;&#x62;&#x2e;&#99;&#111;&#109;">&#x67;&#105;&#116;&#x40;&#x67;&#105;&#x74;&#x68;&#x75;&#x62;&#x2e;&#99;&#111;&#109;</a>:abysw&#x2F;abysw.github.io.git&#x2F;master’.<br>INFO  Deploy done: git</p>
 <p>tags</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://abysw.github.io/2022/05/24/test/" data-id="cl3mr9fkt0004ebbzecz4f9gc" data-title="test" class="article-share-link">Share</a>
+      <a data-url="https://abysw.github.io/2022/05/24/test/" data-id="cl3mrl71m000442bz7mirhj7g" data-title="test" class="article-share-link">Share</a>
       
       
       
@@ -286,7 +304,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://abysw.github.io/2022/05/23/ann-isoform/" data-id="cl3mr9fki0000ebbzgc8tcfay" data-title="isoform 注释" class="article-share-link">Share</a>
+      <a data-url="https://abysw.github.io/2022/05/23/ann-isoform/" data-id="cl3mrl71d000042bz56bm5c7a" data-title="isoform 注释" class="article-share-link">Share</a>
       
       
       
@@ -339,7 +357,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://abysw.github.io/2022/05/23/hello-world/" data-id="cl3mr9fko0001ebbzauny3nzr" data-title="Hello World" class="article-share-link">Share</a>
+      <a data-url="https://abysw.github.io/2022/05/23/hello-world/" data-id="cl3mrl71i000142bzbfby7e06" data-title="Hello World" class="article-share-link">Share</a>
       
       
       
@@ -393,7 +411,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://abysw.github.io/2022/05/23/%E7%AC%AC%E4%B8%80%E7%AF%87github%E5%8D%9A%E5%AE%A2/" data-id="cl3mr9fkw0008ebbz8kor5iiv" data-title="第一篇github博客" class="article-share-link">Share</a>
+      <a data-url="https://abysw.github.io/2022/05/23/%E7%AC%AC%E4%B8%80%E7%AF%87github%E5%8D%9A%E5%AE%A2/" data-id="cl3mrl71p000a42bz97ppepc4" data-title="第一篇github博客" class="article-share-link">Share</a>
       
       
       
@@ -412,13 +430,20 @@
           <aside id="sidebar">
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%8D%9A%E5%AE%A2%E5%86%99%E4%BD%9C/">博客写作</a></li></ul>
+    </div>
+  </div>
+
 
   
     
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9C%AC%E6%96%87%E4%BB%B6%E7%94%B1abysw%E8%BD%AF%E4%BB%B6%E7%9A%84blog%E5%B7%A5%E5%85%B7%E7%94%9F%E6%88%90%E5%92%8C%E4%BF%AE%E6%94%B9%EF%BC%8C%E5%90%8E%E7%BB%AD%E5%B0%86%E5%8A%A0%E5%85%A5%E6%B7%BB%E5%8A%A0%E5%9B%BE%E7%89%87%E7%AD%89%E5%8A%9F%E8%83%BD%E3%80%82/" rel="tag">本文件由abysw软件的blog工具生成和修改，后续将加入添加图片等功能。</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8D%9A%E5%AE%A2%E5%86%99%E4%BD%9C/" rel="tag">博客写作</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9C%AC%E6%96%87%E4%BB%B6%E7%94%B1abysw%E8%BD%AF%E4%BB%B6%E7%9A%84blog%E5%B7%A5%E5%85%B7%E7%94%9F%E6%88%90%E5%92%8C%E4%BF%AE%E6%94%B9%EF%BC%8C%E5%90%8E%E7%BB%AD%E5%B0%86%E5%8A%A0%E5%85%A5%E6%B7%BB%E5%8A%A0%E5%9B%BE%E7%89%87%E7%AD%89%E5%8A%9F%E8%83%BD%E3%80%82/" rel="tag">本文件由abysw软件的blog工具生成和修改，后续将加入添加图片等功能。</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B5%8B%E8%AF%95/" rel="tag">测试</a></li></ul>
     </div>
   </div>
 
@@ -428,7 +453,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/%E6%9C%AC%E6%96%87%E4%BB%B6%E7%94%B1abysw%E8%BD%AF%E4%BB%B6%E7%9A%84blog%E5%B7%A5%E5%85%B7%E7%94%9F%E6%88%90%E5%92%8C%E4%BF%AE%E6%94%B9%EF%BC%8C%E5%90%8E%E7%BB%AD%E5%B0%86%E5%8A%A0%E5%85%A5%E6%B7%BB%E5%8A%A0%E5%9B%BE%E7%89%87%E7%AD%89%E5%8A%9F%E8%83%BD%E3%80%82/" style="font-size: 10px;">本文件由abysw软件的blog工具生成和修改，后续将加入添加图片等功能。</a>
+      <a href="/tags/%E5%8D%9A%E5%AE%A2%E5%86%99%E4%BD%9C/" style="font-size: 10px;">博客写作</a> <a href="/tags/%E6%9C%AC%E6%96%87%E4%BB%B6%E7%94%B1abysw%E8%BD%AF%E4%BB%B6%E7%9A%84blog%E5%B7%A5%E5%85%B7%E7%94%9F%E6%88%90%E5%92%8C%E4%BF%AE%E6%94%B9%EF%BC%8C%E5%90%8E%E7%BB%AD%E5%B0%86%E5%8A%A0%E5%85%A5%E6%B7%BB%E5%8A%A0%E5%9B%BE%E7%89%87%E7%AD%89%E5%8A%9F%E8%83%BD%E3%80%82/" style="font-size: 20px;">本文件由abysw软件的blog工具生成和修改，后续将加入添加图片等功能。</a> <a href="/tags/%E6%B5%8B%E8%AF%95/" style="font-size: 10px;">测试</a>
     </div>
   </div>
 
@@ -450,6 +475,10 @@
       <ul>
         
           <li>
+            <a href="/2022/05/26/test3/">博客头头测试</a>
+          </li>
+        
+          <li>
             <a href="/2022/05/25/raid-cache/">raid-cache 设置问题</a>
           </li>
         
@@ -463,10 +492,6 @@
         
           <li>
             <a href="/2022/05/23/ann-isoform/">isoform 注释</a>
-          </li>
-        
-          <li>
-            <a href="/2022/05/23/hello-world/">Hello World</a>
           </li>
         
       </ul>
