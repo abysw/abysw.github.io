@@ -109,7 +109,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://abysw.github.io/2022/06/02/test5/" data-id="cl3wt0ohl000d7kbz3xeth6t7" data-title="test5" class="article-share-link">Share</a>
+      <a data-url="https://abysw.github.io/2022/06/02/test5/" data-id="cl3wt5id8000d3nbz9un83cxu" data-title="test5" class="article-share-link">Share</a>
       
       
       
@@ -157,7 +157,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://abysw.github.io/2022/06/02/%E7%A1%AC%E7%9B%98%E6%8C%82%E8%BD%BD/" data-id="cl3wt0ohn000g7kbz98v8861i" data-title="硬盘挂载" class="article-share-link">Share</a>
+      <a data-url="https://abysw.github.io/2022/06/02/%E7%A1%AC%E7%9B%98%E6%8C%82%E8%BD%BD/" data-id="cl3wt5id9000g3nbzhhj23nvd" data-title="硬盘挂载" class="article-share-link">Share</a>
       
       
       
@@ -206,7 +206,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://abysw.github.io/2022/05/26/picture/" data-id="cl3wt0ohc00047kbz20rebhsv" data-title="picture" class="article-share-link">Share</a>
+      <a data-url="https://abysw.github.io/2022/05/26/picture/" data-id="cl3wt5id000043nbzbh4vgjkh" data-title="picture" class="article-share-link">Share</a>
       
       
       
@@ -249,7 +249,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://abysw.github.io/2022/05/26/test3/" data-id="cl3wt0ohk000a7kbz623tdq66" data-title="博客头头测试" class="article-share-link">Share</a>
+      <a data-url="https://abysw.github.io/2022/05/26/test3/" data-id="cl3wt5id6000a3nbz3jql65eg" data-title="博客头头测试" class="article-share-link">Share</a>
       
       
       
@@ -304,7 +304,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://abysw.github.io/2022/05/25/raid-cache/" data-id="cl3wt0ohf00057kbzdkafdhh1" data-title="raid-cache 设置问题" class="article-share-link">Share</a>
+      <a data-url="https://abysw.github.io/2022/05/25/raid-cache/" data-id="cl3wt5id200053nbzhc8o6uj4" data-title="raid-cache 设置问题" class="article-share-link">Share</a>
       
       
       
@@ -354,7 +354,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://abysw.github.io/2022/05/24/test2/" data-id="cl3wt0ohi00097kbzbs9fa6fz" data-title="博客测试文档" class="article-share-link">Share</a>
+      <a data-url="https://abysw.github.io/2022/05/24/test2/" data-id="cl3wt5id500093nbz7kf03e6n" data-title="博客测试文档" class="article-share-link">Share</a>
       
       
       
@@ -397,13 +397,13 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ abysw blog raid-cache <span class="comment"># 创建新的博客文档并开始编辑。</span></span><br></pre></td></tr></table></figure>
 
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ abysw blog up <span class="comment"># 更新博客并上传。</span></span><br></pre></td></tr></table></figure>
-<p>Hi abysw&#x2F;abysw.github.io! You’ve successfully authenticated, but GitHub does not provide shell access.<br>INFO  Validating config<br>INFO  Deleted database.<br>INFO  Deleted public folder.<br>INFO  Validating config<br>INFO  Start processing<br>INFO  Files loaded in 150 ms<br>INFO  Generated: archives&#x2F;index.html<br>INFO  Generated: index.html<br>INFO  Generated: images&#x2F;swxxfxxx.png<br>INFO  Generated: tags&#x2F;本文件由abysw软件的blog工具生成和修改，后续将加入添加图片等功能。&#x2F;index.html<br>INFO  Generated: archives&#x2F;2022&#x2F;05&#x2F;index.html<br>INFO  Generated: fancybox&#x2F;jquery.fancybox.min.css<br>INFO  Generated: js&#x2F;script.js<br>INFO  Generated: archives&#x2F;2022&#x2F;index.html<br>INFO  Generated: css&#x2F;style.css<br>INFO  Generated: css&#x2F;fonts&#x2F;FontAwesome.otf<br>INFO  Generated: fancybox&#x2F;jquery.fancybox.min.js<br>INFO  Generated: js&#x2F;jquery-3.4.1.min.js<br>INFO  Generated: css&#x2F;fonts&#x2F;fontawesome-webfont.eot<br>INFO  Generated: css&#x2F;fonts&#x2F;fontawesome-webfont.ttf<br>INFO  Generated: css&#x2F;fonts&#x2F;fontawesome-webfont.woff<br>INFO  Generated: css&#x2F;images&#x2F;banner.jpg<br>INFO  Generated: css&#x2F;fonts&#x2F;fontawesome-webfont.woff2<br>INFO  Generated: 2022&#x2F;05&#x2F;24&#x2F;test&#x2F;index.html<br>INFO  Generated: css&#x2F;fonts&#x2F;fontawesome-webfont.svg<br>INFO  Generated: 2022&#x2F;05&#x2F;23&#x2F;第一篇github博客&#x2F;index.html<br>INFO  Generated: 2022&#x2F;05&#x2F;23&#x2F;ann-isoform&#x2F;index.html<br>INFO  Generated: 2022&#x2F;05&#x2F;24&#x2F;test2&#x2F;index.html<br>INFO  Generated: 2022&#x2F;05&#x2F;23&#x2F;hello-world&#x2F;index.html<br>INFO  Generated: 2022&#x2F;05&#x2F;25&#x2F;raid-cache&#x2F;index.html<br>INFO  24 files generated in 325 ms<br>INFO  Validating config<br>INFO  Deploying: git<br>INFO  Clearing .deploy_git folder…<br>INFO  Copying files from public folder…<br>INFO  Copying files from extend dirs…<br>[master 808f9f0] Site updated: 2022-05-25 16:47:32<br> 8 files changed, 28 insertions(+), 22 deletions(-)<br>Enumerating objects: 41, done.<br>Counting objects: 100% (41&#x2F;41), done.<br>Delta compression using up to 256 threads<br>Compressing objects: 100% (13&#x2F;13), done.<br>Writing objects: 100% (21&#x2F;21), 2.88 KiB | 2.88 MiB&#x2F;s, done.<br>Total 21 (delta 9), reused 0 (delta 0), pack-reused 0<br>remote: Resolving deltas: 100% (9&#x2F;9), completed with 9 local objects.<br>To github.com:abysw&#x2F;abysw.github.io.git<br>   f163b1b..808f9f0  HEAD -&gt; master<br>Branch ‘master’ set up to track ‘<a href="mailto:&#x67;&#105;&#116;&#x40;&#103;&#x69;&#x74;&#104;&#x75;&#x62;&#46;&#x63;&#111;&#109;">&#x67;&#105;&#116;&#x40;&#103;&#x69;&#x74;&#104;&#x75;&#x62;&#46;&#x63;&#111;&#109;</a>:abysw&#x2F;abysw.github.io.git&#x2F;master’.<br>INFO  Deploy done: git</p>
+<p>Hi abysw&#x2F;abysw.github.io! You’ve successfully authenticated, but GitHub does not provide shell access.<br>INFO  Validating config<br>INFO  Deleted database.<br>INFO  Deleted public folder.<br>INFO  Validating config<br>INFO  Start processing<br>INFO  Files loaded in 150 ms<br>INFO  Generated: archives&#x2F;index.html<br>INFO  Generated: index.html<br>INFO  Generated: images&#x2F;swxxfxxx.png<br>INFO  Generated: tags&#x2F;本文件由abysw软件的blog工具生成和修改，后续将加入添加图片等功能。&#x2F;index.html<br>INFO  Generated: archives&#x2F;2022&#x2F;05&#x2F;index.html<br>INFO  Generated: fancybox&#x2F;jquery.fancybox.min.css<br>INFO  Generated: js&#x2F;script.js<br>INFO  Generated: archives&#x2F;2022&#x2F;index.html<br>INFO  Generated: css&#x2F;style.css<br>INFO  Generated: css&#x2F;fonts&#x2F;FontAwesome.otf<br>INFO  Generated: fancybox&#x2F;jquery.fancybox.min.js<br>INFO  Generated: js&#x2F;jquery-3.4.1.min.js<br>INFO  Generated: css&#x2F;fonts&#x2F;fontawesome-webfont.eot<br>INFO  Generated: css&#x2F;fonts&#x2F;fontawesome-webfont.ttf<br>INFO  Generated: css&#x2F;fonts&#x2F;fontawesome-webfont.woff<br>INFO  Generated: css&#x2F;images&#x2F;banner.jpg<br>INFO  Generated: css&#x2F;fonts&#x2F;fontawesome-webfont.woff2<br>INFO  Generated: 2022&#x2F;05&#x2F;24&#x2F;test&#x2F;index.html<br>INFO  Generated: css&#x2F;fonts&#x2F;fontawesome-webfont.svg<br>INFO  Generated: 2022&#x2F;05&#x2F;23&#x2F;第一篇github博客&#x2F;index.html<br>INFO  Generated: 2022&#x2F;05&#x2F;23&#x2F;ann-isoform&#x2F;index.html<br>INFO  Generated: 2022&#x2F;05&#x2F;24&#x2F;test2&#x2F;index.html<br>INFO  Generated: 2022&#x2F;05&#x2F;23&#x2F;hello-world&#x2F;index.html<br>INFO  Generated: 2022&#x2F;05&#x2F;25&#x2F;raid-cache&#x2F;index.html<br>INFO  24 files generated in 325 ms<br>INFO  Validating config<br>INFO  Deploying: git<br>INFO  Clearing .deploy_git folder…<br>INFO  Copying files from public folder…<br>INFO  Copying files from extend dirs…<br>[master 808f9f0] Site updated: 2022-05-25 16:47:32<br> 8 files changed, 28 insertions(+), 22 deletions(-)<br>Enumerating objects: 41, done.<br>Counting objects: 100% (41&#x2F;41), done.<br>Delta compression using up to 256 threads<br>Compressing objects: 100% (13&#x2F;13), done.<br>Writing objects: 100% (21&#x2F;21), 2.88 KiB | 2.88 MiB&#x2F;s, done.<br>Total 21 (delta 9), reused 0 (delta 0), pack-reused 0<br>remote: Resolving deltas: 100% (9&#x2F;9), completed with 9 local objects.<br>To github.com:abysw&#x2F;abysw.github.io.git<br>   f163b1b..808f9f0  HEAD -&gt; master<br>Branch ‘master’ set up to track ‘<a href="mailto:&#x67;&#x69;&#116;&#x40;&#103;&#x69;&#116;&#104;&#117;&#98;&#46;&#99;&#111;&#109;">&#x67;&#x69;&#116;&#x40;&#103;&#x69;&#116;&#104;&#117;&#98;&#46;&#99;&#111;&#109;</a>:abysw&#x2F;abysw.github.io.git&#x2F;master’.<br>INFO  Deploy done: git</p>
 <p>tags</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://abysw.github.io/2022/05/24/test/" data-id="cl3wt0ohg00067kbz4hxl4fzk" data-title="test" class="article-share-link">Share</a>
+      <a data-url="https://abysw.github.io/2022/05/24/test/" data-id="cl3wt5id300063nbz5btu7g9b" data-title="test" class="article-share-link">Share</a>
       
       
       
@@ -453,7 +453,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://abysw.github.io/2022/05/23/ann-isoform/" data-id="cl3wt0ogx00007kbzagw013dj" data-title="isoform 注释" class="article-share-link">Share</a>
+      <a data-url="https://abysw.github.io/2022/05/23/ann-isoform/" data-id="cl3wt5icn00003nbz4cfj0k4v" data-title="isoform 注释" class="article-share-link">Share</a>
       
       
       
@@ -506,7 +506,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://abysw.github.io/2022/05/23/hello-world/" data-id="cl3wt0oh300017kbz6qa26sbz" data-title="Hello World" class="article-share-link">Share</a>
+      <a data-url="https://abysw.github.io/2022/05/23/hello-world/" data-id="cl3wt5icu00013nbz821n7y5w" data-title="Hello World" class="article-share-link">Share</a>
       
       
       
@@ -564,7 +564,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://abysw.github.io/2022/05/23/%E7%AC%AC%E4%B8%80%E7%AF%87github%E5%8D%9A%E5%AE%A2/" data-id="cl3wt0oi2000h7kbz85aff645" data-title="第一篇github博客" class="article-share-link">Share</a>
+      <a data-url="https://abysw.github.io/2022/05/23/%E7%AC%AC%E4%B8%80%E7%AF%87github%E5%8D%9A%E5%AE%A2/" data-id="cl3wt5idm000h3nbzhhy9crrc" data-title="第一篇github博客" class="article-share-link">Share</a>
       
       
       
