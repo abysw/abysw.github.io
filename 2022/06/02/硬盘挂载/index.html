@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>硬盘挂载 | ABYSW</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="本文件由abysw软件的blog工具生成和修改，后续将加入添加图片等功能">
+<meta property="og:type" content="article">
+<meta property="og:title" content="硬盘挂载">
+<meta property="og:url" content="https://abysw.github.io/2022/06/02/%E7%A1%AC%E7%9B%98%E6%8C%82%E8%BD%BD/index.html">
+<meta property="og:site_name" content="ABYSW">
+<meta property="og:description" content="本文件由abysw软件的blog工具生成和修改，后续将加入添加图片等功能">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://abysw.github.io/images/swxxfxxx.png">
+<meta property="article:published_time" content="2022-06-02T07:53:32.000Z">
+<meta property="article:modified_time" content="2022-06-04T04:00:21.247Z">
+<meta property="article:author" content="Yuan-SW-F">
+<meta property="article:tag" content="服务器维护">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://abysw.github.io/images/swxxfxxx.png">
+  
+    <link rel="alternate" href="/atom.xml" title="ABYSW" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">ABYSW</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">ABYSsWrapper (abysw)</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://abysw.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-硬盘挂载" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/06/02/%E7%A1%AC%E7%9B%98%E6%8C%82%E8%BD%BD/" class="article-date">
+  <time class="dt-published" datetime="2022-06-02T07:53:32.000Z" itemprop="datePublished">2022-06-02</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/">服务器</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      硬盘挂载
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p><img src="https://abysw.github.io/images/swxxfxxx.png" alt="使用方法等详细信息请关注公众号【生物信息分析学习】（swxxfxxx）"></p>
+<p>本文执行命令为：abysw blog 硬盘挂载</p>
+<span id="more"></span>
+<p>&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;以下为编写内容&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;<br>_ 项目需求：挂载新硬盘到服务器<br>_ 操作系统：CentOS Linux release 7.9.2009 (AltArch)<br>_ CPU：鲲鹏920 48核 2.6GHZ 2路<br>_ 内存：2T<br>_ 描述：由于项目需要，新买两个机械硬盘，需要挂载为一个阵列。<br>&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</p>
+<p><a target="_blank" rel="noopener" href="http://t.zoukankan.com/SchrodingerDoggy-p-15634678.html">参考网站</a></p>
+<h1 id="新建-x2F-dev-x2F-sdb-的磁盘标签类型为-GPT"><a href="#新建-x2F-dev-x2F-sdb-的磁盘标签类型为-GPT" class="headerlink" title="新建&#x2F;dev&#x2F;sdb 的磁盘标签类型为 GPT"></a>新建&#x2F;dev&#x2F;sdb 的磁盘标签类型为 GPT</h1><p>parted &#x2F;dev&#x2F;sdb mklabel gpt</p>
+<h1 id="将-x2F-dev-x2F-sdb-整个空间分给同一个分区"><a href="#将-x2F-dev-x2F-sdb-整个空间分给同一个分区" class="headerlink" title="将&#x2F;dev&#x2F;sdb 整个空间分给同一个分区"></a>将&#x2F;dev&#x2F;sdb 整个空间分给同一个分区</h1><p>parted &#x2F;dev&#x2F;sdb mkpart primary 0 100%</p>
+<h1 id="新建-x2F-dev-x2F-sdc-的磁盘标签类型为-GPT"><a href="#新建-x2F-dev-x2F-sdc-的磁盘标签类型为-GPT" class="headerlink" title="新建&#x2F;dev&#x2F;sdc 的磁盘标签类型为 GPT"></a>新建&#x2F;dev&#x2F;sdc 的磁盘标签类型为 GPT</h1><p>parted &#x2F;dev&#x2F;sda mklabel gpt  </p>
+<h1 id="将-x2F-dev-x2F-sdc-整个空间分给同一个分区"><a href="#将-x2F-dev-x2F-sdc-整个空间分给同一个分区" class="headerlink" title="将&#x2F;dev&#x2F;sdc 整个空间分给同一个分区"></a>将&#x2F;dev&#x2F;sdc 整个空间分给同一个分区</h1><p>parted &#x2F;dev&#x2F;sda mkpart primary 0 100%</p>
+<p>#####################################<br>#创建物理卷<br>pvcreate &#x2F;dev&#x2F;sdb1<br>pvcreate &#x2F;dev&#x2F;sda1</p>
+<p>#创建卷组（vgcreate）<br>vgcreate vgjenkins &#x2F;dev&#x2F;sdb1</p>
+<p>#添加新的物理卷到卷组中（vgextend）<br>vgextend vgjenkins &#x2F;dev&#x2F;sda1</p>
+<p>#查看卷组（vgs）<br>vgs</p>
+<p>#创建逻辑卷（lvcreate）<br>lvcreate -L 29.1T -n lvjenkins vgjenkins </p>
+<p>#格式化逻辑卷<br>mkfs -t ext4 &#x2F;dev&#x2F;vgjenkins&#x2F;lvjenkins</p>
+<p>Disk &#x2F;dev&#x2F;mapper&#x2F;vgjenkins-lvjenkins: 31995.8 GB, 31995790884864 bytes, 62491779072 sectors<br>Units &#x3D; sectors of 1 * 512 &#x3D; 512 bytes<br>Sector size (logical&#x2F;physical): 512 bytes &#x2F; 4096 bytes<br>I&#x2F;O size (minimum&#x2F;optimal): 4096 bytes &#x2F; 4096 bytes</p>
+<p>&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;后面就是极其简单的挂载了&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;<br>mkdir &#x2F;Urpath<br>mount &#x2F;dev&#x2F;vgjenkins&#x2F;lvjenkins &#x2F;Urpath<br>[root@Yuan-SW-F 2022-06-02 16:16 &#x2F;]<br>$ df -h<br>Filesystem                       Size  Used Avail Use% Mounted on<br>devtmpfs                        1023G     0 1023G   0% &#x2F;dev<br>tmpfs                           1023G     0 1023G   0% &#x2F;dev&#x2F;shm<br>tmpfs                           1023G   74M 1023G   1% &#x2F;run<br>tmpfs                           1023G     0 1023G   0% &#x2F;sys&#x2F;fs&#x2F;cgroup<br>&#x2F;dev&#x2F;mapper&#x2F;centos-root           50G  7.5G   43G  15% &#x2F;<br>&#x2F;dev&#x2F;sdc2                       1014M  163M  852M  16% &#x2F;boot<br>&#x2F;dev&#x2F;mapper&#x2F;centos-home          392G   39M  392G   1% &#x2F;home<br>&#x2F;dev&#x2F;sdc1                        200M  9.1M  191M   5% &#x2F;boot&#x2F;efi<br>tmpfs                            205G  576K  205G   1% &#x2F;run&#x2F;user&#x2F;0<br>&#x2F;dev&#x2F;mapper&#x2F;vgjenkins-lvjenkins   29T   20K   28T   1% &#x2F;Urpath<br>&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;<br>好嘛，我想自己取个名字，那只能回滚几步。<br>&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;<br>&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;<br>umount &#x2F;Urpath</p>
+<p>lvremove &#x2F;dev&#x2F;vgjenkins&#x2F;lvjenkins<br>[root@Yuan-SW-F 2022-06-02 16:23 &#x2F;]<br>$ lvremove &#x2F;dev&#x2F;vgjenkins&#x2F;lvjenkins<br>Do you really want to remove active logical volume vgjenkins&#x2F;lvjenkins? [y&#x2F;n]: y<br>  Logical volume “lvjenkins” successfully removed</p>
+<p>vgremove vgjenkins<br>[root@Yuan-SW-F 2022-06-02 16:24 &#x2F;]<br>$ vgremove vgjenkins<br>  Volume group “vgjenkins” successfully removed</p>
+<p>vgcreate abysw &#x2F;dev&#x2F;sda1<br>vgextend abysw &#x2F;dev&#x2F;sdb1</p>
+<p>$ vgs<br>  VG     #PV #LV #SN Attr   VSize   VFree<br>    abysw    2   0   0 wz–n- &lt;29.11t &lt;29.11t<br>    centos   1   3   0 wz–n- 445.90g      0 </p>
+<p>lvcreate -L 29.1T abysw<br>$ lvcreate -L 29.1T abysw<br>  Rounding up size to full physical extent 29.10 TiB<br>  Logical volume “lvol0” created.<br>这里我没有输入创建名，默认为lvol0</p>
+<p>fdisk -l 找到新创建的盘<br>Disk &#x2F;dev&#x2F;mapper&#x2F;abysw-lvol0: 31995.8 GB, 31995790884864 bytes, 62491779072 sectors<br>Units &#x3D; sectors of 1 * 512 &#x3D; 512 bytes<br>Sector size (logical&#x2F;physical): 512 bytes &#x2F; 4096 bytes<br>I&#x2F;O size (minimum&#x2F;optimal): 4096 bytes &#x2F; 4096 bytes</p>
+<p>格式化：<br>mkfs -t ext4 &#x2F;dev&#x2F;mapper&#x2F;abysw-lvol0</p>
+<p>再挂载，搞定了。</p>
+<ul>
+<li>题外话：现在国产机器也算不错了，conda也有较好的支持。</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://abysw.github.io/2022/06/02/%E7%A1%AC%E7%9B%98%E6%8C%82%E8%BD%BD/" data-id="cl457xhs4000kmobz7can6qir" data-title="硬盘挂载" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%BB%B4%E6%8A%A4/" rel="tag">服务器维护</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2022/06/02/test5/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          调色板设置
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2022/05/26/picture/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">picture</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%8D%9A%E5%AE%A2/">博客</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%8D%9A%E5%AE%A2%E5%86%99%E4%BD%9C/">博客写作</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/">服务器</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%B5%8B%E8%AF%95/">测试</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%B5%8B%E8%AF%95/%E5%8D%9A%E5%AE%A2/">博客</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%94%9F%E4%BF%A1/">生信</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%94%9F%E4%BF%A1%E5%88%86%E6%9E%90/">生信分析</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%86%99%E4%BD%9C%E6%B5%8B%E8%AF%95/" rel="tag">写作测试</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8D%9A%E5%AE%A2%E5%86%99%E4%BD%9C/" rel="tag">博客写作</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8D%9A%E5%AE%A2%E6%B5%8B%E8%AF%95/" rel="tag">博客测试</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%9F%BA%E5%9B%A0%E6%B3%A8%E9%87%8A/" rel="tag">基因注释</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%BB%B4%E6%8A%A4/" rel="tag">服务器维护</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B3%A8%E9%87%8A/" rel="tag">注释</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/%E5%86%99%E4%BD%9C%E6%B5%8B%E8%AF%95/" style="font-size: 10px;">写作测试</a> <a href="/tags/%E5%8D%9A%E5%AE%A2%E5%86%99%E4%BD%9C/" style="font-size: 20px;">博客写作</a> <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%B5%8B%E8%AF%95/" style="font-size: 10px;">博客测试</a> <a href="/tags/%E5%9F%BA%E5%9B%A0%E6%B3%A8%E9%87%8A/" style="font-size: 10px;">基因注释</a> <a href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%BB%B4%E6%8A%A4/" style="font-size: 10px;">服务器维护</a> <a href="/tags/%E6%B3%A8%E9%87%8A/" style="font-size: 10px;">注释</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/06/">June 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/05/">May 2022</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2022/06/08/APA%E5%88%86%E6%9E%90TAPIS/">APA分析TAPIS</a>
+          </li>
+        
+          <li>
+            <a href="/2022/06/06/gmap%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/">gmap使用方法</a>
+          </li>
+        
+          <li>
+            <a href="/2022/06/04/mysql%E9%87%8D%E5%90%AF%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%90%8E%E5%86%8D%E6%AC%A1%E5%A4%B1%E6%95%88/">mysql重启服务器后再次失效</a>
+          </li>
+        
+          <li>
+            <a href="/2022/06/02/test5/">调色板设置</a>
+          </li>
+        
+          <li>
+            <a href="/2022/06/02/%E7%A1%AC%E7%9B%98%E6%8C%82%E8%BD%BD/">硬盘挂载</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2022 Yuan-SW-F<br>
+      Powered by <a href="https://abysw.github.io/" target="_blank">ABYSW</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
