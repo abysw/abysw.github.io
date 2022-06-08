@@ -4,18 +4,19 @@
   <meta charset="utf-8">
   
   
-  <title>mysql重启服务器后再次失效 | ABYSW</title>
+  <title>picture | ABYSW</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="本文件由abysw软件的blog工具生成和修改，后续将加入添加图片等功能">
 <meta property="og:type" content="article">
-<meta property="og:title" content="mysql重启服务器后再次失效">
-<meta property="og:url" content="https://abysw.github.io/2022/06/04/mysql%E9%87%8D%E5%90%AF%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%90%8E%E5%86%8D%E6%AC%A1%E5%A4%B1%E6%95%88/index.html">
+<meta property="og:title" content="picture">
+<meta property="og:url" content="https://abysw.github.io/2022/05/26/picture/index.html">
 <meta property="og:site_name" content="ABYSW">
 <meta property="og:description" content="本文件由abysw软件的blog工具生成和修改，后续将加入添加图片等功能">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://abysw.github.io/images/swxxfxxx.png">
-<meta property="article:published_time" content="2022-06-04T01:00:03.000Z">
-<meta property="article:modified_time" content="2022-06-04T02:30:06.096Z">
+<meta property="og:image" content="https://abysw.github.io/2022/05/26/picture/picture.png">
+<meta property="article:published_time" content="2022-05-26T08:49:11.000Z">
+<meta property="article:modified_time" content="2022-05-26T09:25:12.084Z">
 <meta property="article:author" content="Yuan-SW-F">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://abysw.github.io/images/swxxfxxx.png">
@@ -79,10 +80,10 @@
 </header>
 
       <div class="outer">
-        <section id="main"><article id="post-mysql重启服务器后再次失效" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-picture" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2022/06/04/mysql%E9%87%8D%E5%90%AF%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%90%8E%E5%86%8D%E6%AC%A1%E5%A4%B1%E6%95%88/" class="article-date">
-  <time class="dt-published" datetime="2022-06-04T01:00:03.000Z" itemprop="datePublished">2022-06-04</time>
+    <a href="/2022/05/26/picture/" class="article-date">
+  <time class="dt-published" datetime="2022-05-26T08:49:11.000Z" itemprop="datePublished">2022-05-26</time>
 </a>
     
   </div>
@@ -93,7 +94,7 @@
         
   
     <h1 class="p-name article-title" itemprop="headline name">
-      mysql重启服务器后再次失效
+      picture
     </h1>
   
 
@@ -102,25 +103,19 @@
     <div class="e-content article-entry" itemprop="articleBody">
       
         <p><img src="https://abysw.github.io/images/swxxfxxx.png" alt="使用方法等详细信息请关注公众号【生物信息分析学习】（swxxfxxx）"></p>
-<p>【提示】本文写作命令为：abysw blog mysql重启服务器后再次失效</p>
-<span id="more"></span>
-
-<h1 id="几乎每次重启后，mysql都会报错，所以要专门记录一下。"><a href="#几乎每次重启后，mysql都会报错，所以要专门记录一下。" class="headerlink" title="几乎每次重启后，mysql都会报错，所以要专门记录一下。"></a>几乎每次重启后，mysql都会报错，所以要专门记录一下。</h1><p>服务器：Dell，x86-64<br>系统版本：<br>$ cat &#x2F;etc&#x2F;redhat-release<br>CentOS Linux release 7.9.2009 (Core)<br>问题描述：<br>failed: Can’t connect to local MySQL server through socket ‘&#x2F;tmp&#x2F;mysql.sock’ (2)<br>&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</p>
-<p>先排错：<br>$ mysqld start<br>2022-06-04 10:11:07 0 [Warning] TIMESTAMP with implicit DEFAULT value is deprecated. Please use –explicit_defaults_for_timestamp server option (see documentation for more details).<br>2022-06-04 10:11:07 0 [Note] mysqld (mysqld 5.6.51) starting as process 70395 …<br>2022-06-04 10:11:07 70395 [ERROR] Fatal error: Please read “Security” section of the manual to find out how to run mysqld as root!</p>
-<p>2022-06-04 10:11:07 70395 [ERROR] Aborting</p>
-<p>2022-06-04 10:11:07 70395 [Note] Binlog end<br>2022-06-04 10:11:07 70395 [Note] mysqld: Shutdown complete</p>
-<p>$  service mysqld restart<br>Redirecting to &#x2F;bin&#x2F;systemctl restart mysqld.service</p>
-<p>$ service mysqld status<br>Redirecting to &#x2F;bin&#x2F;systemctl status mysqld.service<br>● mysqld.service - MySQL Community Server<br>   Loaded: loaded (&#x2F;usr&#x2F;lib&#x2F;systemd&#x2F;system&#x2F;mysqld.service; enabled; vendor preset: disabled)<br>   Active: active (running) since Sat 2022-06-04 10:18:16 CST; 33s ago<br>  Process: 164973 ExecStartPost&#x3D;&#x2F;usr&#x2F;bin&#x2F;mysql-systemd-start post (code&#x3D;exited, status&#x3D;0&#x2F;SUCCESS)<br>  Process: 164826 ExecStartPre&#x3D;&#x2F;usr&#x2F;bin&#x2F;mysql-systemd-start pre (code&#x3D;exited, status&#x3D;0&#x2F;SUCCESS)<br>   Main PID: 164972 (mysqld_safe)<br>      Tasks: 23<br>      CGroup: &#x2F;system.slice&#x2F;mysqld.service<br>            ├─164972 &#x2F;bin&#x2F;sh &#x2F;usr&#x2F;bin&#x2F;mysqld_safe –basedir&#x3D;&#x2F;usr<br>            └─165223 &#x2F;usr&#x2F;sbin&#x2F;mysqld –basedir&#x3D;&#x2F;usr –datadir&#x3D;&#x2F;var&#x2F;lib&#x2F;mysql –plugin-dir&#x3D;&#x2F;usr&#x2F;lib64&#x2F;mysql&#x2F;plugin –log-e…<br>Jun 04 10:18:15 xu171 systemd[1]: Starting MySQL Community Server…<br>Jun 04 10:18:15 xu171 mysqld_safe[164972]: 220604 10:18:15 mysqld_safe Logging to ‘&#x2F;var&#x2F;log&#x2F;mysqld.log’.<br>Jun 04 10:18:15 xu171 mysqld_safe[164972]: 220604 10:18:15 mysqld_safe Starting mysqld daemon with databases from &#x2F;…&#x2F;mysql<br>Jun 04 10:18:16 xu171 systemd[1]: Started MySQL Community Server.<br>Hint: Some lines were ellipsized, use -l to show in full.</p>
-<p>$ rm &#x2F;tmp&#x2F;mysql.sock<br>$ ln -s &#x2F;var&#x2F;lib&#x2F;mysql&#x2F;mysql.sock  &#x2F;tmp&#x2F;mysql.sock </p>
-<p>好了，可以用了。<br>总的来说操作如下：<br>切换到root目录，然后输入以下命令，注意看mysql状态是不是激活，激活了是绿色提示，未激活是红色提示。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">service mysqld restart</span><br><span class="line">service mysqld status</span><br><span class="line"><span class="built_in">rm</span> /tmp/mysql.sock       </span><br><span class="line"><span class="built_in">ln</span> -s /var/lib/mysql/mysql.sock  /tmp/mysql.sock</span><br></pre></td></tr></table></figure>
-
-<p>*** 颜色命令还没调试好，没心情截图 ***</p>
+<p>&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; 以上内容为自动生成内容 （代码什么的还是beta版本，不过很简单）&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</p>
+<p>哈哈，累死，我放弃了（I’m quited ！！！）</p>
+<p>当前使用方案是删除了上一篇博客新安装的image模块。</p>
+<p>然后呢，将固定的图片用网站的形式插播。</p>
+<p>将博客文章图片用本地路径插播。</p>
+<p>然后就ok了。</p>
+<p>可能上面所述的东西无法显示，我截图吧。</p>
+<p><img src="/2022/05/26/picture/picture.png" alt="瞅瞅"></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://abysw.github.io/2022/06/04/mysql%E9%87%8D%E5%90%AF%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%90%8E%E5%86%8D%E6%AC%A1%E5%A4%B1%E6%95%88/" data-id="cl457t7pb0006ccbz0mzjdkg3" data-title="mysql重启服务器后再次失效" class="article-share-link">Share</a>
+      <a data-url="https://abysw.github.io/2022/05/26/picture/" data-id="cl457u5k0000a8nbzar4f77yp" data-title="picture" class="article-share-link">Share</a>
       
       
       
@@ -130,19 +125,19 @@
     
 <nav id="article-nav">
   
-    <a href="/2022/06/06/gmap%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2022/06/02/%E7%A1%AC%E7%9B%98%E6%8C%82%E8%BD%BD/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          gmap使用方法
+          硬盘挂载
         
       </div>
     </a>
   
   
-    <a href="/2022/06/02/test5/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2022/05/25/raid-cache/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">调色板设置</div>
+      <div class="article-nav-title">raid-cache 设置问题</div>
     </a>
   
 </nav>
