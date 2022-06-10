@@ -15,7 +15,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://abysw.github.io/images/swxxfxxx.png">
 <meta property="article:published_time" content="2022-06-10T01:56:46.000Z">
-<meta property="article:modified_time" content="2022-06-10T03:14:32.482Z">
+<meta property="article:modified_time" content="2022-06-10T08:12:12.662Z">
 <meta property="article:author" content="Yuan-SW-F">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://abysw.github.io/images/swxxfxxx.png">
@@ -127,11 +127,19 @@
 <p>conda update -n base conda<br>conda create -n maker3<br>conda activate maker3<br>conda install perl-bioperl # o..ok</p>
 <p>conda install maker&#x3D;3.01.03 -y -c bioconda</p>
 <h1 id="哈哈，并没有意外，装不上。"><a href="#哈哈，并没有意外，装不上。" class="headerlink" title="哈哈，并没有意外，装不上。"></a>哈哈，并没有意外，装不上。</h1><p>将之前的maker<a href="maker-3.01.03-pl5262h8f1cd36_2.json">安装记录</a>拷贝到新的环境里面。<br>然后运行：<br>conda update maker</p>
+<p>&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;还是不行&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;<br>&#x3D;&#x3D;&#x3D;脑袋不想装了，反正报错了也能用，但是手还在找方案&#x3D;&#x3D;&#x3D;<br>&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</p>
+<p>下载最新的maker安装包<a href="maker-3.01.03-pl5262h8f1cd36_2.tar.bz2">maker-3.01.03-pl5262h8f1cd36_2.tar.bz2</a></p>
+<p>conda install –use-local maker-3.01.03-pl5262h8f1cd36_2.tar.bz2<br>#安装包<br>maker -h<br>-bash: &#x2F;abysw&#x2F;app&#x2F;miniconda3&#x2F;envs&#x2F;maker6&#x2F;bin&#x2F;maker: &#x2F;abysw&#x2F;app&#x2F;miniconda3&#x2F;envs&#x2F;maker6&#x2F;bin&#x2F;perl: bad interpreter: No such file or directory<br>#运行显示没有perl<br>conda install perl </p>
+<p>&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;<br>conda install -c bioconda&#x2F;label&#x2F;cf201901 maker #  安装成功<br>&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;<br>应该没有后续了。</p>
+<p>$ conda create - n maker3 - c bioconda &#x2F; label &#x2F; cf201901 maker</p>
+<p>&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">conda create -n maker3</span><br><span class="line">conda activate maker3</span><br><span class="line">conda install perl-bioperl -y</span><br><span class="line">conda install -c bioconda/label/cf201901 maker</span><br></pre></td></tr></table></figure>
+<p>&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;再有问题就是网络的问题了&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://abysw.github.io/2022/06/10/%E5%9D%8F%E6%8E%89%E7%9A%84maker/" data-id="cl4836c8j000lz4bz42op9tdo" data-title="坏掉的maker" class="article-share-link">Share</a>
+      <a data-url="https://abysw.github.io/2022/06/10/%E5%9D%8F%E6%8E%89%E7%9A%84maker/" data-id="cl4867qpp000lk8bzhiwjffrv" data-title="坏掉的maker" class="article-share-link">Share</a>
       
       
       
