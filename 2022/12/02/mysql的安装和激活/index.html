@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>mysql的安装和激活 | ABYSW</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="本文件由abysw软件的blog模块编辑和发表">
+<meta property="og:type" content="article">
+<meta property="og:title" content="mysql的安装和激活">
+<meta property="og:url" content="https://abysw.github.io/2022/12/02/mysql%E7%9A%84%E5%AE%89%E8%A3%85%E5%92%8C%E6%BF%80%E6%B4%BB/index.html">
+<meta property="og:site_name" content="ABYSW">
+<meta property="og:description" content="本文件由abysw软件的blog模块编辑和发表">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://abysw.github.io/images/swxxfxxx.png">
+<meta property="article:published_time" content="2022-12-02T10:56:38.000Z">
+<meta property="article:modified_time" content="2022-12-02T12:25:31.862Z">
+<meta property="article:author" content="Yuan-SW-F">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://abysw.github.io/images/swxxfxxx.png">
+  
+    <link rel="alternate" href="/atom.xml" title="ABYSW" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">ABYSW</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">ABYSsWrapper (abysw)</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://abysw.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-mysql的安装和激活" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/12/02/mysql%E7%9A%84%E5%AE%89%E8%A3%85%E5%92%8C%E6%BF%80%E6%B4%BB/" class="article-date">
+  <time class="dt-published" datetime="2022-12-02T10:56:38.000Z" itemprop="datePublished">2022-12-02</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      mysql的安装和激活
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p><img src="https://abysw.github.io/images/swxxfxxx.png" alt="使用方法等详细信息请关注公众号【生物信息分析学习】（swxxfxxx）"></p>
+<p>【提示】本文写作命令为：abysw blog mysql的安装和激活<br>【 另 】有任何问题，欢迎来公众号交流！</p>
+<span id="more"></span>
+
+<p>服务器坏了，MySQL又使用不了了，需要重新安装和分配账号。</p>
+<p>yum -y install mariadb-server mariadb </p>
+<p>systemctl start mariadb # 启动<br>systemctl enable mariadb # 开机启动<br>mysql_secure_installation # 安全配置</p>
+<p>mysql -u root -p1qaz3edc # 登录<br>show databases;<br>exit;</p>
+<p>abyss&#x3D;Urname<br>create user abyss@’192.168…’ identified by ‘1qaz’;<br>grant all privileges on abyss_d.abyss_t to abyss@’192.168….’;</p>
+<p>SET PASSWORD FOR ‘abyss‘@’192.168….’ &#x3D; PASSWORD(“1234”);</p>
+<p>drop user ‘username‘@’host’</p>
+<p>create user ‘abyss‘@’localhost’ identified by ‘1qaz’;<br>grant all privileges on abyss_d.* to ‘abyss‘@’localhost’;</p>
+<p>ln -s &#x2F;var&#x2F;lib&#x2F;mysql&#x2F;mysql.sock &#x2F;tmp&#x2F;mysql.sock</p>
+<p>yum -y install mariadb-server mariadb<br>flush privileges;</p>
+<p>阿里云Centos安装mysql教程<br>yum remove mariadb-server mariadb<br>wget <a target="_blank" rel="noopener" href="http://repo.mysql.com//mysql57-community-release-el7-7.noarch.rpm">http://repo.mysql.com//mysql57-community-release-el7-7.noarch.rpm</a><br>rpm -ivh mysql57-community-release-el7-7.noarch.rpm<br>rpm –import <a target="_blank" rel="noopener" href="https://repo.mysql.com/RPM-GPG-KEY-mysql-2022">https://repo.mysql.com/RPM-GPG-KEY-mysql-2022</a><br>yum -y install mysql-server<br>yum -y install mysql-devel<br>yum -y install mysql<br>rpm -qa | grep -i mysql</p>
+<p>service mysqld status<br>service mysqld stop<br>service mysqld restart<br>service mysqld start </p>
+<p>systemctl enable mysqld </p>
+<p>#cat &#x2F;etc&#x2F;my.cnf<br>#skip-grant-tables</p>
+<p>mysql -u root -p1qaz3edc<br>show databases;</p>
+<p>use mysql;<br>show tables;<br>select user,authentication_string from user;<br>update mysql.user set authentication_string&#x3D;password(‘your password’) where user&#x3D;’root’;<br>flush privileges;<br>exit;</p>
+<p>GRANT SELECT ON <em>.</em> TO ‘pasa‘@’localhost’ IDENTIFIED BY ‘123456’<br>GRANT ALL ON <em>.</em> TO ‘chenyong‘@’localhost’ IDENTIFIED BY ‘123456’;</p>
+<p>create user ‘abyss‘@’localhost’ identified by ‘1qaz’;<br>grant all privileges on abyss_d.* to ‘abyss‘@’localhost’;</p>
+<p>drop user ‘username‘@’host’ # 删除账号<br>SET PASSWORD FOR ‘abyss‘@’192.168….’ &#x3D; PASSWORD(“1234”); #改密码</p>
+<h3 id="开通读写和只读两种权限"><a href="#开通读写和只读两种权限" class="headerlink" title="开通读写和只读两种权限"></a>开通读写和只读两种权限</h3><p>mysql_upgrade -u root -p1qaz3edc<br>create user ‘abyss_w‘@’localhost’ identified by ‘123456’;<br>create user ‘abyss_r‘@’localhost’ identified by ‘123456’;<br>GRANT SELECT ON <em>.</em> TO ‘abysw_r‘@’localhost’ IDENTIFIED BY ‘123456’<br>GRANT ALL ON <em>.</em> TO ‘abysw_w‘@’localhost’ IDENTIFIED BY ‘123456’;<br>flush privileges;<br>exit</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://abysw.github.io/2022/12/02/mysql%E7%9A%84%E5%AE%89%E8%A3%85%E5%92%8C%E6%BF%80%E6%B4%BB/" data-id="clbdnavs6000irnbzdd6f97c9" data-title="mysql的安装和激活" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2022/12/07/update/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          update
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2022/12/02/%E6%8A%A5%E9%94%99%E9%9B%86/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">报错集</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%8D%9A%E5%AE%A2/">博客</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%8D%9A%E5%AE%A2%E5%86%99%E4%BD%9C/">博客写作</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/">服务器</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%B5%8B%E8%AF%95/">测试</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%B5%8B%E8%AF%95/%E5%8D%9A%E5%AE%A2/">博客</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%94%9F%E4%BF%A1/">生信</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%94%9F%E4%BF%A1%E5%88%86%E6%9E%90/">生信分析</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%86%99%E4%BD%9C%E6%B5%8B%E8%AF%95/" rel="tag">写作测试</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8D%9A%E5%AE%A2%E5%86%99%E4%BD%9C/" rel="tag">博客写作</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8D%9A%E5%AE%A2%E6%B5%8B%E8%AF%95/" rel="tag">博客测试</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%9F%BA%E5%9B%A0%E6%B3%A8%E9%87%8A/" rel="tag">基因注释</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%BB%B4%E6%8A%A4/" rel="tag">服务器维护</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B3%A8%E9%87%8A/" rel="tag">注释</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/%E5%86%99%E4%BD%9C%E6%B5%8B%E8%AF%95/" style="font-size: 10px;">写作测试</a> <a href="/tags/%E5%8D%9A%E5%AE%A2%E5%86%99%E4%BD%9C/" style="font-size: 20px;">博客写作</a> <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%B5%8B%E8%AF%95/" style="font-size: 10px;">博客测试</a> <a href="/tags/%E5%9F%BA%E5%9B%A0%E6%B3%A8%E9%87%8A/" style="font-size: 10px;">基因注释</a> <a href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%BB%B4%E6%8A%A4/" style="font-size: 10px;">服务器维护</a> <a href="/tags/%E6%B3%A8%E9%87%8A/" style="font-size: 10px;">注释</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/12/">December 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/11/">November 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/09/">September 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/07/">July 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/06/">June 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/05/">May 2022</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2022/12/07/update/">update</a>
+          </li>
+        
+          <li>
+            <a href="/2022/12/02/mysql%E7%9A%84%E5%AE%89%E8%A3%85%E5%92%8C%E6%BF%80%E6%B4%BB/">mysql的安装和激活</a>
+          </li>
+        
+          <li>
+            <a href="/2022/12/02/%E6%8A%A5%E9%94%99%E9%9B%86/">报错集</a>
+          </li>
+        
+          <li>
+            <a href="/2022/11/29/%E9%87%8D%E8%A3%85%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%90%8E%E9%9C%80%E8%A6%81%E7%9A%84%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/">重装服务器后需要的基础配置</a>
+          </li>
+        
+          <li>
+            <a href="/2022/11/28/%5BBUG%5D%20Failed%20to%20process%20string%20with%20tex%20because%20latex%20could%20not%20be%20found/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2022 Yuan-SW-F<br>
+      Powered by <a href="https://abysw.github.io/" target="_blank">ABYSW</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

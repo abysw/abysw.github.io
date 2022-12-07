@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>染色体分型 | ABYSW</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="本文件由abysw软件的blog工具生成和修改，后续将加入添加图片等功能">
+<meta property="og:type" content="article">
+<meta property="og:title" content="染色体分型">
+<meta property="og:url" content="https://abysw.github.io/2022/09/06/%E6%9F%93%E8%89%B2%E4%BD%93%E5%88%86%E5%9E%8B/index.html">
+<meta property="og:site_name" content="ABYSW">
+<meta property="og:description" content="本文件由abysw软件的blog工具生成和修改，后续将加入添加图片等功能">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://abysw.github.io/images/swxxfxxx.png">
+<meta property="article:published_time" content="2022-09-06T08:00:28.000Z">
+<meta property="article:modified_time" content="2022-09-06T08:35:22.464Z">
+<meta property="article:author" content="Yuan-SW-F">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://abysw.github.io/images/swxxfxxx.png">
+  
+    <link rel="alternate" href="/atom.xml" title="ABYSW" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">ABYSW</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">ABYSsWrapper (abysw)</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://abysw.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-染色体分型" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/09/06/%E6%9F%93%E8%89%B2%E4%BD%93%E5%88%86%E5%9E%8B/" class="article-date">
+  <time class="dt-published" datetime="2022-09-06T08:00:28.000Z" itemprop="datePublished">2022-09-06</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      染色体分型
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p><img src="https://abysw.github.io/images/swxxfxxx.png" alt="使用方法等详细信息请关注公众号【生物信息分析学习】（swxxfxxx）"></p>
+<p>【提示】本文写作命令为：abysw blog 染色体分型<br>【 另 】有任何问题，欢迎来公众号交流！</p>
+<span id="more"></span>
+
+<p>HapCUT2: robust and accurate haplotype assembly for diverse sequencing technologies</p>
+<p>$ conda create -n hapcut2 -c bioconda hapcut2 -y</p>
+<p>支持以下类型数据<br>NGS short reads (Illumina HiSeq)<br>single-molecule long reads (PacBio and Oxford Nanopore)<br>Linked-Reads (e.g. 10X Genomics, stLFR or TELL-seq)<br>proximity-ligation (Hi-C) reads<br>high-coverage sequencing (&gt;40x coverage-per-SNP) using above technologies<br>combinations of the above technologies (e.g. scaffold long reads with Hi-C reads)</p>
+<p>两步运行</p>
+<ol>
+<li>.&#x2F;build&#x2F;extractHAIRS [options] –bam reads.sorted.bam –VCF variants.vcf –out fragment_file<br>获取单倍型信息</li>
+<li>.&#x2F;build&#x2F;HAPCUT2 –fragments fragment_file –VCF variants.vcf –output haplotype_output_file<br>组装单倍型</li>
+</ol>
+<p>输入文件：比对的bam文件，未压缩的vcf文件。</p>
+<p>不知道六倍体怎么玩，试试吧。</p>
+<p>软件总是在调试中理解（主要还是没耐性）。</p>
+<p>.&#x2F;extractHAIRS [options] –bam reads.sorted.bam –VCF variants.VCF –out fragment_file </p>
+<p>Options:<br>–qvoffset &lt;33&#x2F;64&gt; : quality value offset, 33&#x2F;64 depending on how quality values were encoded, default is 33<br>–mbq <INT> : minimum base quality to consider a base for haplotype fragment, default 13<br>–mmq <INT> : minimum read mapping quality to consider a read for phasing, default 20<br>–realign_variants &lt;0&#x2F;1&gt; : Perform sensitive realignment and scoring of variants.<br>–hic &lt;0&#x2F;1&gt; : sets default maxIS to 40MB, prints matrix in new HiC format<br>–10X &lt;0&#x2F;1&gt; : 10X reads. NOTE: Output fragments MUST be processed with LinkReads.py script after extractHAIRS to work with HapCUT2.<br>–pacbio &lt;0&#x2F;1&gt; : Pacific Biosciences reads. Similar to –realign_variants, but with alignment parameters tuned for PacBio reads.<br>–ONT, –ont &lt;0&#x2F;1&gt; : Oxford nanopore technology reads. Similar to –realign_variants, but with alignment parameters tuned for Oxford Nanopore Reads.<br>–new_format, –nf &lt;0&#x2F;1&gt; : prints matrix in new format. Requires –new_format option when running HapCUT2.<br>–VCF <FILENAME> : variant file with genotypes for a single individual in VCF format (unzipped)<br>–maxIS <INT> : maximum insert size for a paired-end read to be considered as a single fragment for phasing, default 1000<br>–minIS <INT> : minimum insert size for a paired-end read to be considered as single fragment for phasing, default 0<br>–PEonly &lt;0&#x2F;1&gt; : do not use single end reads, default is 0 (use all reads)<br>–indels &lt;0&#x2F;1&gt; : extract reads spanning INDELS, default is 0, variants need to specified in VCF format to use this option<br>–noquality <INTEGER> : if the bam file does not have quality string, this value will be used as the uniform quality value, default 0<br>–triallelic &lt;0&#x2F;1&gt; : include variants with genotype 1&#x2F;2 for parsing, default 0<br>–ref <FILENAME> : reference sequence file (in fasta format, gzipped is okay), optional but required for indels, should be indexed<br>–out <FILENAME> : output filename for haplotype fragments, if not provided, fragments will be output to stdout<br>–region <a href="chr:start-end">chr:start-end</a> : chromosome and region in BAM file, useful to process individual chromosomes or genomic regions<br>–ep &lt;0&#x2F;1&gt; : set to 1 to estimate HMM parameters from aligned reads (only with long reads), default &#x3D; 0<br>–hom &lt;0&#x2F;1&gt; : set to 1 to include homozygous variants for processing, default &#x3D; 0 (only heterozygous) </FILENAME></FILENAME></INTEGER></INT></INT></FILENAME></INT></INT></p>
+<p>HapCUT2: robust and accurate haplotype assembly for diverse sequencing technologies</p>
+<p>USAGE : .&#x2F;HAPCUT2 –fragments fragment_file –VCF variantcalls.vcf –output haplotype_output_file</p>
+<p>Basic Options:<br>–fragments, –f <FILENAME>:        file with haplotype-informative reads generated using the extracthairs program<br>–VCF <FILENAME>:                   variant file in VCF format (use EXACT SAME file that was used for the extracthairs program)<br>–output, –o <OUTFILE> :          file to which phased haplotype segments&#x2F;blocks will be output<br>–outvcf &lt;0&#x2F;1&gt; :                    output phased variants to VCF file (<OUTFILE>.phased.vcf), default: 0<br>–converge, –c <int>:              cut off iterations (global or maxcut) after this many iterations with no improvement. default: 5<br>–verbose, –v &lt;0&#x2F;1&gt;:               verbose mode: print extra information to stdout and stderr. default: 0</int></OUTFILE></OUTFILE></FILENAME></FILENAME></p>
+<p>Read Technology Options:<br>–hic &lt;0&#x2F;1&gt; :                       increases accuracy on Hi-C data; models h-trans errors directly from the data. default: 0<br>–hic_htrans_file, –hf <FILENAME>  optional tab-delimited input file where second column specifies h-trans error probabilities for insert size bins 0-50Kb, 50Kb-100Kb, etc.<br>–qv_offset, –qo &lt;33&#x2F;48&#x2F;64&gt; :      quality value offset for base quality scores, default: 33 (use same value as for extracthairs)<br>–long_reads, –lr &lt;0&#x2F;1&gt; :          reduces memory when phasing long read data with many SNPs per read. default: automatic.</FILENAME></p>
+<p>Haplotype Post-Processing Options:<br>–threshold, –t <float>:           PHRED SCALED threshold for pruning low-confidence SNPs (range 0-100, larger values prune more.). default: 6.98<br>–skip_prune, –sp &lt;0&#x2F;1&gt;:           skip default likelihood pruning step (prune SNPs after the fact using column 11 of the output). default: 0<br>–call_homozygous, –ch &lt;0&#x2F;1&gt;:      call positions as homozygous if they appear to be false heterozygotes. default: 0<br>–discrete_pruning, –dp &lt;0&#x2F;1&gt;:     use discrete heuristic to prune SNPs. default: 0<br>–error_analysis_mode, –ea &lt;0&#x2F;1&gt;:  compute switch confidence scores and print to haplotype file but don’t split blocks or prune. default: 0</float></p>
+<p>Advanced Options:<br>–new_format, –nf &lt;0&#x2F;1&gt;:           use new Hi-C fragment matrix file format (but don’t do h-trans error modeling). default: 0<br>–max_iter, –mi <int> :            maximum number of global iterations. Preferable to tweak –converge option instead. default: 10000<br>–maxcut_iter, –mc <int> :         maximum number of max-likelihood-cut iterations. Preferable to tweak –converge option instead. default: 10000<br>–htrans_read_lowbound, –hrl <int> with –hic on, h-trans probability estimation will require this many matepairs per window. default: 500<br>–htrans_max_window, –hmw <int>    with –hic on, the insert-size window for h-trans probability estimation will not expand larger than this many basepairs. default: 4000000</int></int></int></int></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://abysw.github.io/2022/09/06/%E6%9F%93%E8%89%B2%E4%BD%93%E5%88%86%E5%9E%8B/" data-id="clbdnavtf001brnbz8tbmea1y" data-title="染色体分型" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2022/09/28/%E5%B0%86%E8%B4%AD%E4%B9%B0%E7%9A%84%E5%9F%9F%E5%90%8D%E5%88%A9%E7%94%A8%E8%B5%B7%E6%9D%A5/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          将购买的域名利用起来
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2022/07/29/%E5%B2%81%E5%AF%92%E6%9C%AA%E6%9A%96/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">岁寒未暖</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%8D%9A%E5%AE%A2/">博客</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%8D%9A%E5%AE%A2%E5%86%99%E4%BD%9C/">博客写作</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/">服务器</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%B5%8B%E8%AF%95/">测试</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%B5%8B%E8%AF%95/%E5%8D%9A%E5%AE%A2/">博客</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%94%9F%E4%BF%A1/">生信</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%94%9F%E4%BF%A1%E5%88%86%E6%9E%90/">生信分析</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%86%99%E4%BD%9C%E6%B5%8B%E8%AF%95/" rel="tag">写作测试</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8D%9A%E5%AE%A2%E5%86%99%E4%BD%9C/" rel="tag">博客写作</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8D%9A%E5%AE%A2%E6%B5%8B%E8%AF%95/" rel="tag">博客测试</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%9F%BA%E5%9B%A0%E6%B3%A8%E9%87%8A/" rel="tag">基因注释</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%BB%B4%E6%8A%A4/" rel="tag">服务器维护</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B3%A8%E9%87%8A/" rel="tag">注释</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/%E5%86%99%E4%BD%9C%E6%B5%8B%E8%AF%95/" style="font-size: 10px;">写作测试</a> <a href="/tags/%E5%8D%9A%E5%AE%A2%E5%86%99%E4%BD%9C/" style="font-size: 20px;">博客写作</a> <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%B5%8B%E8%AF%95/" style="font-size: 10px;">博客测试</a> <a href="/tags/%E5%9F%BA%E5%9B%A0%E6%B3%A8%E9%87%8A/" style="font-size: 10px;">基因注释</a> <a href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%BB%B4%E6%8A%A4/" style="font-size: 10px;">服务器维护</a> <a href="/tags/%E6%B3%A8%E9%87%8A/" style="font-size: 10px;">注释</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/12/">December 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/11/">November 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/09/">September 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/07/">July 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/06/">June 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/05/">May 2022</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2022/12/07/update/">update</a>
+          </li>
+        
+          <li>
+            <a href="/2022/12/02/mysql%E7%9A%84%E5%AE%89%E8%A3%85%E5%92%8C%E6%BF%80%E6%B4%BB/">mysql的安装和激活</a>
+          </li>
+        
+          <li>
+            <a href="/2022/12/02/%E6%8A%A5%E9%94%99%E9%9B%86/">报错集</a>
+          </li>
+        
+          <li>
+            <a href="/2022/11/29/%E9%87%8D%E8%A3%85%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%90%8E%E9%9C%80%E8%A6%81%E7%9A%84%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/">重装服务器后需要的基础配置</a>
+          </li>
+        
+          <li>
+            <a href="/2022/11/28/%5BBUG%5D%20Failed%20to%20process%20string%20with%20tex%20because%20latex%20could%20not%20be%20found/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2022 Yuan-SW-F<br>
+      Powered by <a href="https://abysw.github.io/" target="_blank">ABYSW</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

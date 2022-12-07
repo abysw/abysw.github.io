@@ -15,7 +15,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://abysw.github.io/images/swxxfxxx.png">
 <meta property="article:published_time" content="2022-06-17T08:12:20.000Z">
-<meta property="article:modified_time" content="2022-06-17T08:12:21.148Z">
+<meta property="article:modified_time" content="2022-12-01T10:50:19.269Z">
 <meta property="article:author" content="Yuan-SW-F">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://abysw.github.io/images/swxxfxxx.png">
@@ -102,6 +102,12 @@
     <div class="e-content article-entry" itemprop="articleBody">
       
         <p><img src="https://abysw.github.io/images/swxxfxxx.png" alt="使用方法等详细信息请关注公众号【生物信息分析学习】（swxxfxxx）"></p>
+<p>之前的不能用了，然后找自己的博客，发现这这这怎么忘写了。</p>
+<p>原来是备份在脚本了：</p>
+<p>&#x2F;etc&#x2F;sysconfig&#x2F;network-scripts<br>A服务器：<br>$ cat ifcfg-em1<br>TYPE&#x3D;Ethernet<br>PROXY_METHOD&#x3D;none<br>BROWSER_ONLY&#x3D;no<br>BOOTPROTO&#x3D;static<br>DEFROUTE&#x3D;yes<br>IPV4_FAILURE_FATAL&#x3D;no<br>IPV6INIT&#x3D;yes<br>IPV6_AUTOCONF&#x3D;yes<br>IPV6_DEFROUTE&#x3D;yes<br>IPV6_FAILURE_FATAL&#x3D;no<br>IPV6_ADDR_GEN_MODE&#x3D;stable-privacy<br>NAME&#x3D;em1<br>UUID&#x3D;<br>DEVICE&#x3D;em1<br>ONBOOT&#x3D;yes<br>IPADDR&#x3D;192.168.abysw.abysw_1<br>NETMASK&#x3D;255.255.255.0<br>GATEWAY&#x3D;192.168.abysw.1<br>DNS1&#x3D;10.10<br>DNS2&#x3D;10.10<br>ZONE&#x3D;trusted</p>
+<p>B服务器：<br>$ cat ifcfg-enp9s0f0<br>TYPE&#x3D;Ethernet<br>PROXY_METHOD&#x3D;none<br>BROWSER_ONLY&#x3D;no<br>BOOTPROTO&#x3D;static<br>DEFROUTE&#x3D;yes<br>IPV4_FAILURE_FATAL&#x3D;no<br>IPV6INIT&#x3D;yes<br>IPV6_AUTOCONF&#x3D;yes<br>IPV6_DEFROUTE&#x3D;yes<br>IPV6_FAILURE_FATAL&#x3D;no<br>IPV6_ADDR_GEN_MODE&#x3D;stable-privacy<br>NAME&#x3D;enp9s0f0<br>UUID&#x3D;<br>DEVICE&#x3D;enp9s0f0<br>ONBOOT&#x3D;yes<br>IPADDR&#x3D;192.168.abysw.abysw_2<br>GATEWAY&#x3D;192.168.abysw.abysw_1<br>NETMASK&#x3D;255.255.255.0<br>DNS1&#x3D;10.10.<br>DNS2&#x3D;10.10.</p>
+<p>共享脚本：<br>#!&#x2F;bin&#x2F;bash</p>
+<h1 id="File-Name-share-em1-sh"><a href="#File-Name-share-em1-sh" class="headerlink" title="File Name: share-em1.sh"></a>File Name: share-em1.sh</h1><h1 id="Author-root-Yuan-SW-F-x79-x75-x61-x6e-x73-x77-102-x40-x31-x36-x33-x2e-99-x6f-x6d"><a href="#Author-root-Yuan-SW-F-x79-x75-x61-x6e-x73-x77-102-x40-x31-x36-x33-x2e-99-x6f-x6d" class="headerlink" title="Author  : root, Yuan-SW-F, &#x79;&#x75;&#x61;&#x6e;&#x73;&#x77;&#102;&#x40;&#x31;&#x36;&#x33;&#x2e;&#99;&#x6f;&#x6d;"></a>Author  : root, Yuan-SW-F, <a href="mailto:&#x79;&#x75;&#x61;&#x6e;&#x73;&#x77;&#102;&#x40;&#x31;&#x36;&#x33;&#x2e;&#99;&#x6f;&#x6d;">&#x79;&#x75;&#x61;&#x6e;&#x73;&#x77;&#102;&#x40;&#x31;&#x36;&#x33;&#x2e;&#99;&#x6f;&#x6d;</a></h1><h1 id="Created-Time-2022-06-20-14-34-46"><a href="#Created-Time-2022-06-20-14-34-46" class="headerlink" title="Created Time: 2022-06-20 14:34:46"></a>Created Time: 2022-06-20 14:34:46</h1><p>service network restart<br>echo 1 &gt; &#x2F;proc&#x2F;sys&#x2F;net&#x2F;ipv4&#x2F;ip_forward<br>systemctl stop NetworkManager<br>systemctl disable NetworkManager<br>firewall-cmd –permanent –zone&#x3D;public –remove-interface&#x3D;em1<br>firewall-cmd –permanent –zone&#x3D;trusted –add-interface&#x3D;em1<br>firewall-cmd –reload<br>systemctl restart firewalld<br>iptables -t nat -A POSTROUTING -s “192.168.70.0&#x2F;255.255.255.0” -o em1 -j MASQUERADE<br>iptables -A FORWARD -i em1 -j ACCEPT<br>iptables -t nat -A POSTROUTING -s “192.168.70.25&#x2F;255.255.255.0” -o em1 -j MASQUERADE<br>iptables -t nat -A POSTROUTING -s “192.168.70.26&#x2F;255.255.255.0” -o em1 -j MASQUERADE</p>
 <p>【提示】本文写作命令为：abysw blog 通过局域网共享网络连接（测试版）</p>
 <span id="more"></span>
 
@@ -109,7 +115,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://abysw.github.io/2022/06/17/%E9%80%9A%E8%BF%87%E5%B1%80%E5%9F%9F%E7%BD%91%E5%85%B1%E4%BA%AB%E7%BD%91%E7%BB%9C%E8%BF%9E%E6%8E%A5%EF%BC%88%E6%B5%8B%E8%AF%95%E7%89%88%EF%BC%89/" data-id="cl5rn3e4n00124qbzawfxgd1j" data-title="通过局域网共享网络连接（测试版）" class="article-share-link">Share</a>
+      <a data-url="https://abysw.github.io/2022/06/17/%E9%80%9A%E8%BF%87%E5%B1%80%E5%9F%9F%E7%BD%91%E5%85%B1%E4%BA%AB%E7%BD%91%E7%BB%9C%E8%BF%9E%E6%8E%A5%EF%BC%88%E6%B5%8B%E8%AF%95%E7%89%88%EF%BC%89/" data-id="clbdnavtk001krnbzhq1b4zy5" data-title="通过局域网共享网络连接（测试版）" class="article-share-link">Share</a>
       
       
       
@@ -177,7 +183,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/07/">July 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/06/">June 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/05/">May 2022</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/12/">December 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/11/">November 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/09/">September 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/07/">July 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/06/">June 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/05/">May 2022</a></li></ul>
     </div>
   </div>
 
@@ -190,23 +196,23 @@
       <ul>
         
           <li>
-            <a href="/2022/07/19/orthofinder%E6%89%93%E5%BC%80%E6%96%87%E4%BB%B6%E6%95%B0%E4%B8%8A%E9%99%90/">orthofinder打开文件数上限</a>
+            <a href="/2022/12/07/update/">update</a>
           </li>
         
           <li>
-            <a href="/2022/07/18/%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2%E8%AE%BF%E9%97%AElinux/">远程桌面访问linux</a>
+            <a href="/2022/12/02/mysql%E7%9A%84%E5%AE%89%E8%A3%85%E5%92%8C%E6%BF%80%E6%B4%BB/">mysql的安装和激活</a>
           </li>
         
           <li>
-            <a href="/2022/07/08/%E5%9F%BA%E5%9B%A0%E5%8A%9F%E8%83%BD%E6%B3%A8%E9%87%8A%E7%AC%94%E8%AE%B0/">基因功能注释笔记</a>
+            <a href="/2022/12/02/%E6%8A%A5%E9%94%99%E9%9B%86/">报错集</a>
           </li>
         
           <li>
-            <a href="/2022/06/20/arm%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AE%89%E8%A3%85samtools/">arm服务器安装samtools</a>
+            <a href="/2022/11/29/%E9%87%8D%E8%A3%85%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%90%8E%E9%9C%80%E8%A6%81%E7%9A%84%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/">重装服务器后需要的基础配置</a>
           </li>
         
           <li>
-            <a href="/2022/06/17/%E9%80%9A%E8%BF%87%E5%B1%80%E5%9F%9F%E7%BD%91%E5%85%B1%E4%BA%AB%E7%BD%91%E7%BB%9C%E8%BF%9E%E6%8E%A5%EF%BC%88%E6%B5%8B%E8%AF%95%E7%89%88%EF%BC%89/">通过局域网共享网络连接（测试版）</a>
+            <a href="/2022/11/28/%5BBUG%5D%20Failed%20to%20process%20string%20with%20tex%20because%20latex%20could%20not%20be%20found/">(no title)</a>
           </li>
         
       </ul>
